@@ -12,10 +12,11 @@ def clear_chat():
     chat_box.config(state=tk.NORMAL)
     chat_box.delete(1.0, tk.END)
     chat_box.config(state=tk.DISABLED)
-
+ 
 # Create the main window
 root = tk.Tk()
 root.title("Chat Box")
+
 
 # Create a Text widget to display the chat history
 chat_box = tk.Text(root, state=tk.DISABLED)
@@ -32,6 +33,8 @@ send_button.pack(padx=10, pady=5)
 # Create a Clear button to clear the chat history
 clear_button = tk.Button(root, text="Clear Chat", command=clear_chat)
 clear_button.pack(padx=10, pady=5)
+
+
 
 # Start the Tkinter event loop
 root.mainloop()

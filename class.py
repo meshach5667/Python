@@ -1,29 +1,26 @@
-class Music:
-    def __init__(self,name:str,amount:int,price:int):
-        
+import tkinter as tk 
 
-         self.name = name
-         self.amount = amount
-         self.price = price
-         
+class MyGUI:
+    def __init__(self):
+      
 
-    def musical_instruments(self):
-        return self.amount * self.price
+        self.label = tk.Label(self.window,text = "Your message",font=("Arial",18))
+        self.label.pack(padx=10,pady=10)
+        self.textBox = tk.Text(self.window,height=5,font=("Arial",16))
+        self.textBox.pack(padx=10,pady=10)
+        self.check_state =tk.IntVar()
 
-guitar = Music(input("Enter the type of instrument you want: "), input("Enter amount: "),200)
-piano = Music(input("Enter the type of instrument you want: "),input("Enter amount: "),400)
-
-
-print(guitar.musical_instruments())
-print(piano.musical_instruments())
+        self.button = tk.Button(self.window,text="Show message",font=("Arial",18),command=self.show_message)
+        self.button.pack
 
 
+        self.check = tk.Checkbutton(self.root,text="Show message box",font=("Arial",18))
+        self.check.pack(padx=10,pady=10)
 
-        
-
-        
        
-     
+    #def show_message():
+       # print(self.check_state.get())
+        self.window = tk.Tk()
+        self.window.mainloop()
 
-
-
+        
