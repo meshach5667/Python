@@ -32,7 +32,12 @@ class Item:
             reader = csv.DictReader(f)
             items = list(reader)
         for item in items:
-            print(item)
+            Item(
+                name=item.get("name"),
+                price=int(item.get("price")),
+             quantity=int(item.get("quantity"))
+
+            )
 
 
 
@@ -41,3 +46,4 @@ class Item:
 
 Item.instantiate_from_csv()
 
+print(Item.all)
